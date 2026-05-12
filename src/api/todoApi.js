@@ -38,7 +38,7 @@ async function request(path, options = {}) {
     })
   } catch {
     throw new Error(
-      '서버에 연결할 수 없습니다. Heroku 백엔드 상태를 확인하거나, 로컬 백엔드 사용 시 .env에 VITE_API_BASE_URL=http://localhost:5000 을 설정하세요.',
+      '서버에 연결할 수 없습니다. Heroku가 꺼져 있지 않은지 확인하고, 브라우저 주소가 http://127.0.0.1:5173 이면 http://localhost:5173 로 열어 보세요(CORS). 로컬 백엔드면 .env에 VITE_API_BASE_URL=http://localhost:5000',
     )
   }
 
